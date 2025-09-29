@@ -1,10 +1,16 @@
 package Players;
-public class NPC {
-    private double winningNumber;
 
-    public void generateNumber(){
-        double n = Math.random();
+import java.util.Random;
+
+public class NPC {
+    private int winningNumber;
+
+    public void setWinningNumber(){
+        Random rand = new Random();
+        int n = rand.nextInt(100);
         winningNumber = n;
-        System.out.println(winningNumber);
+    }
+    public int getWinningNumber() {
+        return winningNumber;
     }
 }
